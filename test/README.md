@@ -1,8 +1,8 @@
 
-## Put files to board
+## Put files to board (PowerShell)
 Command:
 ```
-install.bat <AMPY_PORT> <MACHINE> <DEMO>
+install.ps1 -PORT <AMPY_PORT> -MACHINE <MACHINE> -DEMO <MACHINE>
 ```
 - AMPY_PORT : USB serial port name
 - MACHINE : Choose a support machine name `[ESP8266, ES32, RPi]`
@@ -10,6 +10,7 @@ install.bat <AMPY_PORT> <MACHINE> <DEMO>
 
 example:
 ```
-install.bat COM8 ESP8266 LoRaReceiver
-install.bat COM10 ESP8266 LoRaSender
+> powershell
+PS > ./install.ps1 -PORT COM8 -MACHINE ESP8266 -DEMO LoRaReceiver
+PS > ./install.ps1 -PORT COM10 -MACHINE ESP8266 -DEMO LoRaSender
 ```
