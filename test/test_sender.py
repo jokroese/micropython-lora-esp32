@@ -2,7 +2,7 @@ from test_util import createLoRa
 import LoRaSender
 
 def main():
-    LoRa = createLoRa()
+    LoRa = createLoRa(syncWord=0xF3)
     print('LoRa', LoRa)
     LoRaSender.send(LoRa)
 

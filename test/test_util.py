@@ -1,7 +1,7 @@
 import sx127x
 import config_lora
 
-def createLoRa():
+def createLoRa(syncWord=0x34):
     '''
     Create LoRa Instance
     '''
@@ -33,6 +33,8 @@ def createLoRa():
     pin_id_CadDetected = PIN_ID_FOR_LORA_DIO4
     pin_id_PayloadCrcError = PIN_ID_FOR_LORA_DIO5
     '''
-    return controller.add_transceiver(SX127x_Ins,
+    lora = controller.add_transceiver(SX127x_Ins,
                                       pin_id_ss=config_lora.Controller.PIN_ID_FOR_LORA_SS,
                                       pin_id_RxDone=config_lora.Controller.PIN_ID_FOR_LORA_DIO0)
+    lora.setSyncWord(syncWord)
+    return lora
