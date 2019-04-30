@@ -14,8 +14,9 @@ function fn_put ($source, $dist) {
 function get_test($demo) {
     switch ($demo) {
         LoRaSender { return "test_sender" }
-        LoRaReceiver {return "test_receiver"}
-        Default { return ""}
+        LoRaReceiver { return "test_receiver" }
+        LoRaPingPong { return "test_pingpong" }
+        Default { return "" }
     }
 }
 
@@ -23,7 +24,7 @@ $env:AMPY_PORT = $PORT # set ampy usb serial port as env
 
 # support validation
 $IS_SUPPORT = $FALSE
-$SUPPORTS = @("ESP8266", "ES32", "RPi")
+$SUPPORTS = @("ESP8266", "ESP32", "RPi")
 foreach ($s in $SUPPORTS) { 
     if ($MACHINE -eq $s) {$IS_SUPPORT = $TRUE}
 }
@@ -35,10 +36,10 @@ if ($IS_SUPPORT -eq $TRUE) {
     fn_put ../codes/DEMO/$DEMO.py "$DEMO.py"
     # Lib
     Write-Output "[ put libs ...]"
-    fn_put ../src/$MACHINE/config_lora.py config_lora.py
     if ($MACHINE -eq "RPi") {
         fn_put ../codes/controller/controller_rpi.py controller_rpi.py
     } else {
+        fn_put ../src/ESP8266/config_lora.py config_lora.py
         fn_put ../codes/controller/controller_esp.py controller_esp.py
     }
     fn_put ../codes/controller/controller.py controller.py
