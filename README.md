@@ -6,6 +6,6 @@
 The target of this project is refactoring codes for more friendly.
 
 ## Support Boards
-- ESP8266 (*First refactoring Target*)
-- ES32 (*WIP*)
-- Raspberry Pi (*WIP*)
+- ESP8266
+- ES32
+- Raspberry Pi
