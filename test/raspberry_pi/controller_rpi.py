@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import spidev
-import controller
+import LoRa.controller as controller
 
 
 GPIO.setmode(GPIO.BCM)

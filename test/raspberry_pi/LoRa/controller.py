@@ -1,7 +1,5 @@
 from time import sleep
 
-
-
 class Controller:
     class Mock:
         pass

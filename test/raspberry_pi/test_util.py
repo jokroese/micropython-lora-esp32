@@ -1,4 +1,4 @@
-import sx127x
+import LoRa.sx127x as sx127x
 import config_lora
 
 def createLoRa(syncWord=0x34):

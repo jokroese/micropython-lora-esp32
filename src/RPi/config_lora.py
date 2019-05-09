@@ -4,7 +4,6 @@ import socket
 
 millisecond = lambda: time.time() * 1000
 
-IS_MICROPYTHON = (sys.implementation.name == 'micropython')
 NODE_NAME = 'RPi_' + socket.gethostname()
 
 from controller_rpi import Controller

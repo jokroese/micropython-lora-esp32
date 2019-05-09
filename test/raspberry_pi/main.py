@@ -2,7 +2,7 @@
 import gc
 gc.collect()
 
-import sx127x
+import LoRa.sx127x
 gc.collect()
 
 import test
