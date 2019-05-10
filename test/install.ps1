@@ -15,7 +15,7 @@ function get_test($demo) {
     switch ($demo) {
         LoRaSender { return "test_sender" }
         LoRaReceiver { return "test_receiver" }
-        LoRaPingPong { return "test_pingpong" }
+        # LoRaPingPong { return "test_pingpong" }
         Default { return "" }
     }
 }
@@ -36,10 +36,10 @@ if ($IS_SUPPORT -eq $TRUE) {
     fn_put ../codes/DEMO/$DEMO.py "$DEMO.py"
     # Lib
     Write-Output "[ put libs ...]"
-    fn_put ../src/ESP8266/config_lora.py config_lora.py
-    fn_put ../codes/controller/controller_esp.py controller_esp.py
-    fn_put ../codes/controller/controller.py controller.py
-    fn_put ../codes/sx127x/sx127x.py sx127x.py
+    fn_put ../src/$MACHINE/config_lora.py config_lora.py
+    fn_put ../src/$MACHINE/controller_esp.py controller_esp.py
+    fn_put ../src/LoRa/controller.py controller.py
+    fn_put ../src/LoRa/sx127x.py sx127x.py
     # test
     Write-Output "[ put test ...]"
     fn_put boot.py boot.py

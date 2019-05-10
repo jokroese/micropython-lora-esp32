@@ -9,7 +9,8 @@ def mac2eui(mac):
 uuid = hexlify(unique_id()).decode()
 millisecond = ticks_ms
 
-NODE_NAME = 'ESP8266_' + uuid
+NODE_NAME = 'ESP32_' + uuid
 NODE_EUI = mac2eui(uuid)
+SOFT_SPI = None
 
 from controller_esp import Controller
