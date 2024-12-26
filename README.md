@@ -1,28 +1,8 @@
-# MicroPython-LoRa-SX127x
-> Thank [Wei1234c](https://github.com/Wei1234c) sharing his work.
-> - Original Project : https://github.com/Wei1234c/SX127x_driver_for_MicroPython_on_ESP8266
-> - Description in Chinese: https://wei1234c.blogspot.tw/2017/08/sx127x-lora-transceiver-driver-for.html
+# MicroPython LoRa ESP32
 
-The target of this project is refactoring codes for more friendly.
+MicroPython driver for SX127x LoRa modules, focused on ESP32-S3 and compatible ESP32 boards.
 
-Folders of Original Project:
-- **codes**
-- **examples**
-- **jpgs**
-- **notebooks**
-- **references**
+## Acknowledgements
 
-## Support Boards
-- ESP8266
-- ES32
-- Raspberry Pi
-
-## Refactoring
-In order to reduce the coupling, the LoRa core module and the independent configuration of each supported board are separated from the original codes.
-- **src/LoRa**: LoRa core module, include `sx127x` and `controller` abstract class.
-- **src/ES32**: configuration and implement `controller` class for ES32.
-- **src/ESP8266**: configuration and implement `controller` class for ESP8266.
-- **src/RPi**: configuration and implement `controller` class for Raspberry Pi.
-
-## Testing
-All testing codes are placed in **test** Folder, see [README.md](test/README.md).
+- [Wei1234c](https://github.com/Wei1234c)'s original project: https://github.com/Wei1234c/SX127x_driver_for_MicroPython_on_ESP8266 with a description in Chinese: https://wei1234c.blogspot.tw/2017/08/sx127x-lora-transceiver-driver-for.html
+- [ShenTengTu](https://github.com/ShenTengTu)'s fork: https://github.com/ShenTengTu/MicroPython-LoRa-SX127x which refactored the project.
